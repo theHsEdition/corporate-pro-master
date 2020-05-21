@@ -18,6 +18,8 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
+
 add_filter( 'body_class', 'corporate_add_service_body_class' );
 /**
  * Add landing page body class to the head.
@@ -66,8 +68,6 @@ function corporate_add_service_body_class( $classes ) {
 				<img src="<?php echo $main_image["url"]; ?>" alt="<?php echo $main_image["alt"]; ?>">
 			</div>
 		</div>
-
-		<a href="#details" class="n-button n-button-plain">Explore Benefits</a>
 		</div>
 	</section>
 

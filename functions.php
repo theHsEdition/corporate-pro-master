@@ -63,4 +63,20 @@ function home_page_widget() {
     }
 }
 
+function register_additional_genesis_menus() {
+
+register_nav_menu( 'footer-menu' ,
+__( 'Footer Menu' ));
+}
+add_action( 'init', 'register_additional_genesis_menus' );
+
+add_action( 'genesis_footer', 'add_footer_menu' ); 
+
+function add_footer_menu() {
+
+wp_nav_menu( array( 
+'theme_location' => 'footer-menu', 
+'container_class' => 'genesis-nav-menu' ) );
+}
+
 add_image_size( 'vertical-thumbnail',   680, 900, true );

@@ -29,7 +29,7 @@ add_filter( 'body_class', 'corporate_add_service_body_class' );
  * @return array
  */
 function corporate_add_service_body_class( $classes ) {
-	$classes[] = 'service-page';
+	$classes[] = 'industry-page';
 
 	return $classes;
 }
@@ -62,7 +62,6 @@ function corporate_add_service_body_class( $classes ) {
 				<div></div>
 
 			</div>
-
 		</div>
 	</section>
 
@@ -122,6 +121,8 @@ remove_action( 'genesis_before_content_sidebar_wrap', 'corporate_hero_section' )
 
 // Remove breadcrumbs.
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
+
+remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
 
 // Run the Genesis loop.
 genesis();
