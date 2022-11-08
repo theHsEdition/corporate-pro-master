@@ -8,7 +8,7 @@
   "dependencies": {},
   "devDependencies": {
     "bourbon": "^5.1.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-src-ordered-globs": "^1.0.3",
     "gulp-wp-toolkit": "^2.3.2",
     "gulp-zip": "^4.1.0",
